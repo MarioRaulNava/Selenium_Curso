@@ -29,7 +29,7 @@ public class MiprimerTest
         driver.get("https://www.amazon.com/");
     }
 
-    @Test
+     @Test
     public void TestAmazon () throws InterruptedException
     {
         WebElement InputBusqueda = driver.findElement(By.id("twotabsearchtextbox"));
@@ -40,9 +40,26 @@ public class MiprimerTest
         WebElement BottonLupa = driver.findElement(By.id("nav-search-submit-button"));
         BottonLupa.click();
         Thread.sleep(4000);
-
-
     }
+
+
+    @Test
+
+    public void UsoXpath()  throws InterruptedException
+    {
+        //Este xpath es absoluto por lo que no se debe de considerar
+        /* WebElement buttonCompras = driver.findElement(By.xpath("/html/body/div[1]/div[1]/header/div/div[1]/div[3]/div/a[4]/div[2]/span[2]\n"));
+                buttonCompras.click();
+        Thread.sleep(5000);
+        
+        */
+
+
+        WebElement buttonCompras = driver.findElement(By.xpath("//span[@id='nav-cart-count']"));
+        buttonCompras.click();
+        Thread.sleep(5000);
+    }
+
 
     @After
     public void tearDown()       //nombre del Cierre de navegador
