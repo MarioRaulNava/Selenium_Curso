@@ -49,6 +49,34 @@ public class TareaUno
         inputSignin.click();
         Thread.sleep(10000);
 
+
+
+
+
+        WebElement inputLoginUno = driver.findElement(By.xpath("//div//nav//div[@class='header_user_info']"));  //Fucking Div me hizo perder tiempo
+        inputLoginUno.click();                                        // Es la accion que se dara al elemento
+        Thread.sleep (10000);                             // Aqui despues de 5 segundos duerme la pantalla y cierra
+
+        WebElement inputEmailUno = driver.findElement(By.xpath("//div//form//input[@id='email']"));           // Ingreso de campo de Email
+        inputEmailUno.click();
+        inputEmailUno.sendKeys("");
+        inputEmailUno.submit();
+        Thread.sleep(3000);
+
+        WebElement inputPassUno = driver.findElement(By.xpath("//span//input[@id='passwd']"));           // Ingreso de campo de Password
+        inputPassUno.click();
+        inputPassUno.sendKeys("Raul");
+        inputPassUno.submit();
+        Thread.sleep(3000);
+
+        WebElement inputSigninUno = driver.findElement(By.xpath("//form//button[@class='btn btn-default button-search']"));           // Ingreso de campo de SigIn
+        inputSigninUno.click();
+        Thread.sleep(20000);
+
+
+
+
+
     }
 
     @After

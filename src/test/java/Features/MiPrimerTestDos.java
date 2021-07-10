@@ -1,4 +1,4 @@
-package MiprimerTest;
+package Features;
 
 import org.junit.After;
 import org.junit.Before;
