@@ -16,9 +16,10 @@ public class Login
 
     ElementsLogin elementsLogin = new ElementsLogin();
     SeleniumUtils Utils = new SeleniumUtils();
+    private WebDriver driver;
 
 
-    public void miLogin (WebDriver driver) throws Exception
+    public void miLogin (WebDriver driver) throws InterruptedException
     {
         // Se da clic en el boton SignIn
         Thread.sleep(2000);
@@ -30,7 +31,6 @@ public class Login
         JavascriptExecutor js = (JavascriptExecutor) driver;
         js.executeScript("window.scrollBy (0,350)");
         Thread.sleep(2000);
-        Utils.loading(driver, 4000);
 
         // Se da clic y se llena el user
         Utils.ClickButton(elementsLogin.InputUser(driver));

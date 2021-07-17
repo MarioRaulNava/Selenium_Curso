@@ -16,7 +16,7 @@ public class ElementsLogin
     }
 
 
-    // eLEMENTOS iNPUT uSUARIO
+    // ELEMENTOS INPUT USUARIO
 
     public By byinputUser = By.id("email");
     public WebElement InputUser (WebDriver driver)
@@ -24,6 +24,25 @@ public class ElementsLogin
         WebElement inputUser = driver.findElement(byinputUser);
         return inputUser;
     }
+
+
+
+    //3 ELEMENTO TAP WOMAN
+    public By byTapWoman = By.partialLinkText("Women");
+    public WebElement TapWoman(WebDriver driver)
+    {
+        WebElement  tapWoman = driver.findElement(byTapWoman);
+        return tapWoman;
+    }
+
+    //4 ELEMENTO BOTON PRUEBA
+    public By byBotonPrueba = By.xpath("test");
+    public WebElement BtnPruba (WebDriver driver)
+    {
+        WebElement  btnPrueba= driver.findElement(byBotonPrueba);
+        return btnPrueba;
+    }
+
 
     //Elemento password
 
