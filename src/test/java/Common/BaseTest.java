@@ -1,10 +1,9 @@
 package Common;
 
 
-import Features.Login;
-import org.junit.After;
-import org.junit.Before;
 import org.openqa.selenium.WebDriver;
+import org.testng.annotations.AfterTest;
+import org.testng.annotations.BeforeTest;
 
 import java.util.concurrent.TimeUnit;
 
@@ -16,7 +15,7 @@ public class BaseTest
     Login login = new Login();
 
 
-    @Before
+    @BeforeTest
     public void Login () throws Exception
 
     {
@@ -35,7 +34,7 @@ public class BaseTest
     }
 
 
-    @After
+    @AfterTest
     public void tearDown()
     {
         //La funcion "Drive.quit" nos sirve para cerrar el navegador

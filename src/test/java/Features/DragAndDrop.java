@@ -3,8 +3,8 @@ package Features;
 import Common.BaseTestTres;
 import Elements.ElementsDragAndDrop;
 import Utils.SeleniumUtils;
-import org.junit.Test;
 import org.openqa.selenium.interactions.Actions;
+import org.testng.annotations.Test;
 
 
 public class DragAndDrop extends BaseTestTres
@@ -27,7 +27,4 @@ public class DragAndDrop extends BaseTestTres
 
         Utils.loading(driver,3000);
     }
-
-
-
 }

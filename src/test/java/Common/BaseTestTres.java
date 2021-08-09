@@ -1,8 +1,9 @@
 package Common;
 
-import org.junit.After;
-import org.junit.Before;
+
 import org.openqa.selenium.WebDriver;
+import org.testng.annotations.AfterTest;
+import org.testng.annotations.BeforeTest;
 
 import java.util.concurrent.TimeUnit;
 
@@ -13,7 +14,7 @@ public class BaseTestTres
 
     //*****************************************************
 
-    @Before
+    @BeforeTest
     public void beforeTestMethod() throws Exception
     {
         driver = Config.navegadorFirefox();
@@ -23,7 +24,7 @@ public class BaseTestTres
     }
 
 
-    @After
+    @AfterTest
         public void afterMethodMethod()
         {
             driver.quit();
