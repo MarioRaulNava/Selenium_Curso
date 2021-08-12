@@ -1,25 +1,26 @@
 package TareaAutomation;
 
 
-import org.junit.After;
-import org.junit.Before;
+
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.firefox.FirefoxDriver;
+import org.testng.annotations.AfterTest;
+import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 
 public class TareaUno
 {
     private WebDriver driver;
 
-    @Before
+    @BeforeTest
     public void setUp()
     {
         //Se coloca la direccion del driver, sea chrome, sea mozilla o edge desde el SRC donde se descargo el driver.
-        System.setProperty("webdriver.chrome.driver", "src/main/resources/Drivers/ChromeDriver/chromedriver.exe");
+        System.setProperty("webdriver.gecko.driver", "src/main/resources/FirefoxDriver/geckodriver.exe");
 
-        driver = new ChromeDriver();                            //Crea la instancia del navegador
+        driver = new FirefoxDriver();                            //Crea la instancia del navegador
 
         driver.manage().window().maximize();                    //Maximiza el navegador
 
@@ -80,7 +81,7 @@ public class TareaUno
 
     }
 
-    @After
+    @AfterTest
     public void CloseBrowser()
     {
        driver.quit();     //Cierra el navegador

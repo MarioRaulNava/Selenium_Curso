@@ -5,7 +5,7 @@ import org.junit.Before;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.firefox.FirefoxDriver;
 import org.testng.annotations.Test;
 
 
@@ -17,10 +17,10 @@ public class MiPrimerTestDos
     public void setUp()
     {
         //Se coloca la direccion del driver, sea chrome, sea mozilla o edge.
-        System.setProperty("webdriver.chrome.driver", "src/main/resources/Drivers/ChromeDriver/chromedriver.exe");
+        System.setProperty("webdriver.gecko.driver", "src/main/resources/FirefoxDriver/geckodriver.exe");
 
         //Crea la instancia del navegador
-        driver = new ChromeDriver();
+        driver = new FirefoxDriver();
 
         //Maximiza el navegador
         driver.manage().window().maximize();
@@ -70,15 +70,14 @@ public void TestAmazon  () throws InterruptedException
 
     Thread.sleep(5000);*/
 
-        //Uso de xpath por relation Ship
+/*      Uso de xpath por relation Ship
         WebElement inputBusqueda = driver.findElement(By.xpath("//div/input[@id='twotabsearchtextbox' and @dir='auto']"));
         inputBusqueda.click();
         inputBusqueda.clear();
         inputBusqueda.sendKeys("Celulares");
         inputBusqueda.submit();
-        Thread.sleep(5000);
+        Thread.sleep(5000);  */
     }
-
 
     @After
     public void tearDown()
